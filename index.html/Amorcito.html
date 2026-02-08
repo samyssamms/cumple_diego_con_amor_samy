@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Diego 💖</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Georgia", serif;
+      background: linear-gradient(to bottom, #ff758c, #ffdde1);
+      overflow: hidden;
+      text-align: center;
+    }
+
+    h1 {
+      margin-top: 20px;
+      font-size: 50px;
+      color: white;
+      text-shadow: 2px 2px 8px black;
+    }
+
+    /* Zona lluvia de recuerdos */
+    .recuerdos {
+      position: relative;
+      width: 100%;
+      height: 65vh;
+      overflow: hidden;
+    }
+
+    .recuerdos img,
+    .recuerdos video,
+    .corazon {
+      position: absolute;
+      border-radius: 20px;
+      animation: caer 14s linear infinite;
+      opacity: 0;
+    }
+
+    .recuerdos img {
+      width: 230px;
+      box-shadow: 0px 0px 20px rgba(0,0,0,0.4);
+    }
+
+    .recuerdos video {
+      width: 260px;
+      box-shadow: 0px 0px 25px rgba(0,0,0,0.5);
+    }
+
+    .corazon {
+      font-size: 35px;
+    }
+
+    @keyframes caer {
+      0% {
+        top: -300px;
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+      }
+      100% {
+        top: 800px;
+        opacity: 0;
+      }
+    }
+
+    /* Botón regalo */
+    #botonRegalo {
+      background: #ff2d55;
+      color: white;
+      border: none;
+      padding: 18px 45px;
+      font-size: 25px;
+      border-radius: 35px;
+      cursor: pointer;
+      margin-top: 15px;
+      box-shadow: 0px 0px 25px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+
+    #botonRegalo:hover {
+      background: white;
+      color: #ff2d55;
+      transform: scale(1.05);
+    }
+
+    /* Pergamino */
+    #pergamino {
+      display: none;
+      position: fixed;
+      top: 8%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 75%;
+      background: #fff3d6;
+      padding: 35px;
+      border-radius: 25px;
+      box-shadow: 0px 0px 40px black;
+      max-height: 80vh;
+      overflow-y: auto;
+      animation: aparecer 1s;
+      text-align: left;
+    }
+
+    @keyframes aparecer {
+      from {transform: translateX(-50%) scale(0.6);}
+      to {transform: translateX(-50%) scale(1);}
+    }
+
+    #cerrar {
+      background: black;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 15px;
+      cursor: pointer;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>💖 Feliz día amorcito💖</h1>
+
+ <audio id="musica" loop>
+  <source src="cancion.mp3" type="audio/mpeg">
+</audio>
+
+
+  <!-- 🌸 Fotos + Videos + Corazones -->
+  <div class="recuerdos">
+
+    <!-- 15 Fotos -->
+    <img src="foto1.jpg" style="left:5%; animation-delay:0s;">
+    <img src="foto2.jpg" style="left:25%; animation-delay:2s;">
+    <img src="foto3.jpg" style="left:45%; animation-delay:4s;">
+    <img src="foto4.jpg" style="left:65%; animation-delay:6s;">
+    <img src="foto5.jpg" style="left:80%; animation-delay:8s;">
+
+    <img src="foto6.jpg" style="left:15%; animation-delay:10s;">
+    <img src="foto7.jpg" style="left:35%; animation-delay:12s;">
+    <img src="foto8.jpg" style="left:55%; animation-delay:14s;">
+    <img src="foto9.jpg" style="left:75%; animation-delay:16s;">
+    <img src="foto10.jpg" style="left:50%; animation-delay:18s;">
+
+    <img src="foto11.jpg" style="left:10%; animation-delay:20s;">
+    <img src="foto12.jpg" style="left:30%; animation-delay:22s;">
+    <img src="foto13.jpg" style="left:60%; animation-delay:24s;">
+    <img src="foto14.jpg" style="left:85%; animation-delay:26s;">
+    <img src="foto15.jpg" style="left:40%; animation-delay:28s;">
+
+    <!-- 3 Videos -->
+    <video src="video1.mp4" autoplay muted loop style="left:20%; animation-delay:5s;"></video>
+    <video src="video2.mp4" autoplay muted loop style="left:55%; animation-delay:15s;"></video>
+    <video src="video3.mp4" autoplay muted loop style="left:75%; animation-delay:25s;"></video>
+
+    <!-- Corazones -->
+    <div class="corazon" style="left:10%; animation-delay:3s;">💖</div>
+    <div class="corazon" style="left:40%; animation-delay:9s;">💕</div>
+    <div class="corazon" style="left:70%; animation-delay:13s;">💘</div>
+    <div class="corazon" style="left:90%; animation-delay:19s;">💗</div>
+    <div class="corazon" style="left:55%; animation-delay:23s;">❤️</div>
+
+  </div>
+
+  <!-- 🎁 Botón -->
+  <button id="botonRegalo" onclick="abrirPergamino()">
+    🎁 Clic aquí mi amor
+  </button>
+
+  <!-- 📜 Carta Pergamino -->
+  <div id="pergamino">
+    <h2>Para ti, Noviecito precioso 💌</h2>
+
+    <p>
+      Mi amor…<br><br>
+
+Mi amor…
+
+Hoy el mundo celebra que existes, pero yo celebro mucho más que una fecha: celebro tu vida, tu corazón tan noble, tu luz y esa forma tan tuya de hacer que todo sea más bonito desde que llegaste a mi vida.
+<br><br>
+
+Celebro tus ojitos, porque me encanta mirarlos y perderme en ellos, porque en ellos encuentro calma, amor y todo lo que no siempre se puede decir con palabras. Me encanta verte, observarte, guardar en mi memoria cada gesto tuyo.
+<br><br>
+
+Y tu sonrisa… ay, tu sonrisa. Me encanta hacerte sonreír, haría cualquier cosa con tal de ver esa sonrisa en tu rostro. Verte sonreír es una de las cosas que más amo en el mundo; ilumina mis días, me llena el corazón y me recuerda lo feliz que soy solo por mirarte. No sabes cuánto disfruto verte así, genuino, feliz, siendo tú.
+<br><br>
+
+Gracias por ser ese hombre maravilloso que me cuida, que me ama, que está presente de una manera tan sincera. Gracias por hacerme sentir especial incluso en los días más simples, cuando basta con tu mirada o tu abrazo para que todo esté bien.
+<br><br>
+
+Eres uno de los regalos más hermosos que la vida me ha dado, y no hay palabras suficientes para decirte cuánto te amo. Aun así, mi corazón nunca se cansa de intentarlo.
+<br><br>
+
+Deseo que este cumpleaños sea solo el comienzo de un año lleno de luz, de sueños cumplidos, de risas compartidas y de muchos momentos juntos. Yo quiero seguir celebrándote hoy y siempre, caminando a tu lado, eligiéndote cada día.
+<br><br>
+
+
+      <b>Feliz cumpleaños mi amor 🎂💖</b>
+    </p>
+
+    <button id="cerrar" onclick="cerrarPergamino()">Cerrar</button>
+  </div>
+
+  <script>
+    function abrirPergamino() {
+      document.getElementById("pergamino").style.display = "block";
+    }
+
+    function cerrarPergamino() {
+      document.getElementById("pergamino").style.display = "none";
+    }
+
+  </script>
+
+</body>
+</html>
